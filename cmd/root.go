@@ -23,17 +23,22 @@ var rootCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		// 注意：需要通过长名称获取选项的值
 		value, _ := cmd.Flags().GetBool("lst")
+		targetDir, _ := cmd.Flags().GetString("directory")
+		if targetDir == "" {
+			wd, _ := os.Getwd()
+			targetDir = wd
+		}
+
 		sep := " "
 		if value {
 			sep = "\n"
 		}
-		listDirContent(sep)
+		listDirContent(sep, targetDir)
 	},
 }
 
-func listDirContent(sep string) {
-	wd, _ := os.Getwd()
-	files, _ := ioutil.ReadDir(wd)
+func listDirContent(sep string, targetDir string) {
+	files, _ := ioutil.ReadDir(targetDir)
 	fileNames := make([]string, 0, len(files))
 	for _, file := range files {
 		fileNames = append(fileNames, file.Name())
@@ -51,14 +56,7 @@ func Execute() {
 }
 
 func init() {
-	// Here you will define your flags and configuration settings.
-	// Cobra supports persistent flags, which, if defined here,
-	// will be global for your application.
-
-	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.list.yaml)")
-
-	// Cobra also supports local flags, which will only run
-	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	rootCmd.Flags().BoolP("lst", "l", false, "列出文件名，并使用换行符分隔")
+	rootCmd.Flags().StringP("directory", "d", "", "目标文件夹")
 }
