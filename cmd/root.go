@@ -13,13 +13,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
-
-
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "list",
-	Short: "列出当前文件下的内容",
-	Long: `列出当前文件下所有的文件名称，包括文件名和目录名。`,
+	Short: "列出指定文件下的内容",
+	Long:  `列出指定文件下所有的文件名称，包括文件名和目录名。`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// 注意：需要通过长名称获取选项的值
 		value, _ := cmd.Flags().GetBool("lst")
