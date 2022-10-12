@@ -9,3 +9,7 @@
 ## 配套代码说明
 
 本项目有多个分支，每篇教程的代码代码均有对应的分支。
+
+## 关注作者
+
+![关注作者](https://github.com/isaltyfish/list/blob/master/jstarqr.jpg)
