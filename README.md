@@ -2,12 +2,12 @@
 
 ## 运行方法
 
-```shell
-go run main.go -d /some/dir
+```bash
+go run main.go -d /tmp -p s
 # 或者
-go run main.go --directory=/some/dir
+go run main.go --directory=/tmp --prefix=s
 ```
 
 ## 教程地址
 
-[https://verytools.net/xtools-guide/posts/easy-command-part3](https://verytools.net/xtools-guide/posts/easy-command-part3)
+[https://verytools.net/xtools-guide/posts/easy-command-part4](https://verytools.net/xtools-guide/posts/easy-command-part4)
