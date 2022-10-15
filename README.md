@@ -9,12 +9,14 @@
 * [（一）简单命令行](https://verytools.net/xtools-guide/posts/easy-command-part1)
 * [（二）命令行选项一](https://verytools.net/xtools-guide/posts/easy-command-part2)
 * [（三）命令行选项二](https://verytools.net/xtools-guide/posts/easy-command-part3)
+* [（四）子命令](https://verytools.net/xtools-guide/posts/easy-command-part4)
 
 配套代码的分支分别为：
 
 * easy-command-part1
 * easy-command-part2
 * easy-command-part3
+* easy-command-part4
 
 ## 关注作者
 
